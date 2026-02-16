@@ -13,11 +13,15 @@ namespace sport_club.Models
     {
         [Browsable(false)]
         public  int Id { get; set; }
+        [Browsable(false)]
         public List<Sportsmen> SportsmenId { get; set; }
+        [Browsable(false)]
         public Coaches CoachesId { get; set; }
+        public string DisplaySportsmenId => string.Join(", ", SportsmenId.Select(s => s.Id).ToList());
+        public int DisplayCoachesId => CoachesId.Id;
         public DateTime TrainingDate { get; set; }
         public bool IsAttended { get; set; }
-        public string DisplaySportsmenId => string.Join(", ", SportsmenId.Select(d => d.ToString()));
+
 
         public static List<Sportsmen> GetSportsmen(string sportsmensId)
         {
@@ -30,8 +34,8 @@ namespace sport_club.Models
         public static Coaches GetCoaches(int id)
         {
             Coaches Coaches = new();
-            List<Coaches> coaches = SportClubDatabase.GetCoaches();
-            return coaches.Find(c => c.Id == id);
+            List<Coaches> coach = SportClubDatabase.GetCoaches();
+            return coach.Find(c => c.Id == id);
         }
     }
 }
