@@ -12,9 +12,16 @@ namespace sport_club
 
         public void GetData()
         {
-            dataGridView1.DataSource = SportClubDatabase.GetSportsmens();
-            dataGridView2.DataSource = SportClubDatabase.GetCoaches();
-            dataGridView3.DataSource = SportClubDatabase.GetAttendances();
+            
+            dataGridView2.DataSource = SportClubDatabase.GetCoachStatistics();
+            dataGridView3.DataSource = SportClubDatabase.GetChildActivityReport();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            dataGridView1.DataSource = SportClubDatabase.GetSkippersReport( dateTimePicker1.Value, dateTimePicker2.Value);
         }
     }
 }

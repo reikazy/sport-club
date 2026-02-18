@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace sport_club.Models
 {
-    internal class Coaches
+    public class Coaches
     {
         public int Id { get; set; }
         public string FullName { get; set; }

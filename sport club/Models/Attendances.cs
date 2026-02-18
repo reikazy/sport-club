@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace sport_club.Models
 
 {
-    internal class Attendances
+    public class Attendances
     {
         [Browsable(false)]
         public  int Id { get; set; }
