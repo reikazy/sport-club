@@ -41,10 +41,25 @@
             tabPage2 = new TabPage();
             tableLayoutPanel2 = new TableLayoutPanel();
             dataGridView3 = new DataGridView();
+            panel2 = new Panel();
             tabPage3 = new TabPage();
             tableLayoutPanel3 = new TableLayoutPanel();
             dataGridView2 = new DataGridView();
-            button2 = new Button();
+            tabPage4 = new TabPage();
+            tableLayoutPanel4 = new TableLayoutPanel();
+            dataGridView4 = new DataGridView();
+            panel3 = new Panel();
+            button3 = new Button();
+            tabPage5 = new TabPage();
+            tableLayoutPanel5 = new TableLayoutPanel();
+            dataGridView5 = new DataGridView();
+            panel4 = new Panel();
+            button4 = new Button();
+            tabPage6 = new TabPage();
+            tableLayoutPanel6 = new TableLayoutPanel();
+            dataGridView6 = new DataGridView();
+            panel5 = new Panel();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             TabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -56,6 +71,18 @@
             tabPage3.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            tabPage4.SuspendLayout();
+            tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView4).BeginInit();
+            panel3.SuspendLayout();
+            tabPage5.SuspendLayout();
+            tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView5).BeginInit();
+            panel4.SuspendLayout();
+            tabPage6.SuspendLayout();
+            tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView6).BeginInit();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // dataGridView1
@@ -72,6 +99,9 @@
             TabControl1.Controls.Add(tabPage1);
             TabControl1.Controls.Add(tabPage2);
             TabControl1.Controls.Add(tabPage3);
+            TabControl1.Controls.Add(tabPage4);
+            TabControl1.Controls.Add(tabPage5);
+            TabControl1.Controls.Add(tabPage6);
             TabControl1.Dock = DockStyle.Fill;
             TabControl1.Location = new Point(0, 0);
             TabControl1.Name = "TabControl1";
@@ -107,7 +137,6 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
@@ -178,6 +207,7 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 77.90179F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 22.0982151F));
             tableLayoutPanel2.Controls.Add(dataGridView3, 0, 0);
+            tableLayoutPanel2.Controls.Add(panel2, 1, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(3, 3);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -194,6 +224,14 @@
             dataGridView3.Name = "dataGridView3";
             dataGridView3.Size = new Size(864, 565);
             dataGridView3.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(873, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(241, 565);
+            panel2.TabIndex = 1;
             // 
             // tabPage3
             // 
@@ -229,14 +267,167 @@
             dataGridView2.Size = new Size(864, 565);
             dataGridView2.TabIndex = 0;
             // 
-            // button2
+            // tabPage4
             // 
-            button2.Location = new Point(75, 449);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 5;
-            button2.Text = "Добавить";
-            button2.UseVisualStyleBackColor = true;
+            tabPage4.Controls.Add(tableLayoutPanel4);
+            tabPage4.Location = new Point(4, 24);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Padding = new Padding(3);
+            tabPage4.Size = new Size(1123, 577);
+            tabPage4.TabIndex = 3;
+            tabPage4.Text = "Coaches";
+            tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel4
+            // 
+            tableLayoutPanel4.ColumnCount = 2;
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 77.90179F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 22.0982151F));
+            tableLayoutPanel4.Controls.Add(dataGridView4, 0, 0);
+            tableLayoutPanel4.Controls.Add(panel3, 1, 0);
+            tableLayoutPanel4.Dock = DockStyle.Fill;
+            tableLayoutPanel4.Location = new Point(3, 3);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 1;
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel4.Size = new Size(1117, 571);
+            tableLayoutPanel4.TabIndex = 3;
+            // 
+            // dataGridView4
+            // 
+            dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView4.Dock = DockStyle.Fill;
+            dataGridView4.Location = new Point(3, 3);
+            dataGridView4.Name = "dataGridView4";
+            dataGridView4.Size = new Size(864, 565);
+            dataGridView4.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(button3);
+            panel3.Dock = DockStyle.Fill;
+            panel3.Location = new Point(873, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(241, 565);
+            panel3.TabIndex = 1;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(72, 130);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 23);
+            button3.TabIndex = 0;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // tabPage5
+            // 
+            tabPage5.Controls.Add(tableLayoutPanel5);
+            tabPage5.Location = new Point(4, 24);
+            tabPage5.Name = "tabPage5";
+            tabPage5.Padding = new Padding(3);
+            tabPage5.Size = new Size(1123, 577);
+            tabPage5.TabIndex = 4;
+            tabPage5.Text = "Sportsmen";
+            tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel5
+            // 
+            tableLayoutPanel5.ColumnCount = 2;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 77.90179F));
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 22.0982151F));
+            tableLayoutPanel5.Controls.Add(dataGridView5, 0, 0);
+            tableLayoutPanel5.Controls.Add(panel4, 1, 0);
+            tableLayoutPanel5.Dock = DockStyle.Fill;
+            tableLayoutPanel5.Location = new Point(3, 3);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 1;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.Size = new Size(1117, 571);
+            tableLayoutPanel5.TabIndex = 4;
+            // 
+            // dataGridView5
+            // 
+            dataGridView5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView5.Dock = DockStyle.Fill;
+            dataGridView5.Location = new Point(3, 3);
+            dataGridView5.Name = "dataGridView5";
+            dataGridView5.Size = new Size(864, 565);
+            dataGridView5.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(button4);
+            panel4.Dock = DockStyle.Fill;
+            panel4.Location = new Point(873, 3);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(241, 565);
+            panel4.TabIndex = 1;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(72, 130);
+            button4.Name = "button4";
+            button4.Size = new Size(75, 23);
+            button4.TabIndex = 0;
+            button4.Text = "button4";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // tabPage6
+            // 
+            tabPage6.Controls.Add(tableLayoutPanel6);
+            tabPage6.Location = new Point(4, 24);
+            tabPage6.Name = "tabPage6";
+            tabPage6.Padding = new Padding(3);
+            tabPage6.Size = new Size(1123, 577);
+            tabPage6.TabIndex = 5;
+            tabPage6.Text = "Attendances";
+            tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel6
+            // 
+            tableLayoutPanel6.ColumnCount = 2;
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 77.90179F));
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 22.0982151F));
+            tableLayoutPanel6.Controls.Add(dataGridView6, 0, 0);
+            tableLayoutPanel6.Controls.Add(panel5, 1, 0);
+            tableLayoutPanel6.Dock = DockStyle.Fill;
+            tableLayoutPanel6.Location = new Point(3, 3);
+            tableLayoutPanel6.Name = "tableLayoutPanel6";
+            tableLayoutPanel6.RowCount = 1;
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel6.Size = new Size(1117, 571);
+            tableLayoutPanel6.TabIndex = 4;
+            // 
+            // dataGridView6
+            // 
+            dataGridView6.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView6.Dock = DockStyle.Fill;
+            dataGridView6.Location = new Point(3, 3);
+            dataGridView6.Name = "dataGridView6";
+            dataGridView6.Size = new Size(864, 565);
+            dataGridView6.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(button5);
+            panel5.Dock = DockStyle.Fill;
+            panel5.Location = new Point(873, 3);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(241, 565);
+            panel5.TabIndex = 1;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(72, 130);
+            button5.Name = "button5";
+            button5.Size = new Size(75, 23);
+            button5.TabIndex = 0;
+            button5.Text = "button5";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // Form1
             // 
@@ -258,6 +449,18 @@
             tabPage3.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            tabPage4.ResumeLayout(false);
+            tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView4).EndInit();
+            panel3.ResumeLayout(false);
+            tabPage5.ResumeLayout(false);
+            tableLayoutPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView5).EndInit();
+            panel4.ResumeLayout(false);
+            tabPage6.ResumeLayout(false);
+            tableLayoutPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView6).EndInit();
+            panel5.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -279,6 +482,21 @@
         private Label label1;
         private DateTimePicker dateTimePicker2;
         private Button button1;
-        private Button button2;
+        private Panel panel2;
+        private TabPage tabPage4;
+        private TableLayoutPanel tableLayoutPanel4;
+        private DataGridView dataGridView4;
+        private Panel panel3;
+        private Button button3;
+        private TabPage tabPage5;
+        private TableLayoutPanel tableLayoutPanel5;
+        private DataGridView dataGridView5;
+        private Panel panel4;
+        private Button button4;
+        private TabPage tabPage6;
+        private TableLayoutPanel tableLayoutPanel6;
+        private DataGridView dataGridView6;
+        private Panel panel5;
+        private Button button5;
     }
 }

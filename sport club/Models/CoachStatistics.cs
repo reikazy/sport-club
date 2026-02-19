@@ -14,6 +14,6 @@ namespace sport_club.Models
         public int TotalTrainings { get; set; }
         public int AttendedTrainings { get; set; }
         public int SkippedTrainings { get; set; }
-        public double AttendancePercentage { get; set; }
+        public double? AttendancePercentage { get; set; }
     }
 }

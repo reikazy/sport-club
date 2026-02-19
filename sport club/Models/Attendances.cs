@@ -14,22 +14,20 @@ namespace sport_club.Models
         [Browsable(false)]
         public  int Id { get; set; }
         [Browsable(false)]
-        public List<Sportsmen> SportsmenId { get; set; }
+        public Sportsmen SportsmenId { get; set; }
         [Browsable(false)]
         public Coaches CoachesId { get; set; }
-        public string DisplaySportsmenId => string.Join(", ", SportsmenId.Select(s => s.Id).ToList());
+        public int DisplaySportsmenId => SportsmenId.Id;
         public int DisplayCoachesId => CoachesId.Id;
         public DateTime TrainingDate { get; set; }
         public bool IsAttended { get; set; }
 
 
-        public static List<Sportsmen> GetSportsmen(string sportsmensId)
+        public static Sportsmen GetSportsmen(int id)
         {
-            List<Sportsmen> sportsmenForOrder = new();
-            List<Sportsmen> sportsmens = SportClubDatabase.GetSportsmens();
-            int[] disesIdInt = sportsmensId.Split(',').Select(d => Int32.Parse(d)).ToArray();
-            sportsmenForOrder = sportsmens.Where(d => disesIdInt.Contains(d.Id)).ToList();
-            return sportsmenForOrder;
+            Sportsmen Coaches = new();
+            List<Sportsmen> coach = SportClubDatabase.GetSportsmens();
+            return coach.Find(c => c.Id == id);
         }
         public static Coaches GetCoaches(int id)
         {

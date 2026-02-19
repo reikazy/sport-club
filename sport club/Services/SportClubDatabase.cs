@@ -61,7 +61,7 @@ namespace sport_club.Services
                 reader => new Attendances
                 {
                     Id = reader.GetInt32(0),
-                    SportsmenId = Attendances.GetSportsmen(reader.GetString(1)),
+                    SportsmenId = Attendances.GetSportsmen(reader.GetInt32(1)),
                     CoachesId = Attendances.GetCoaches(reader.GetInt32(2)),
                     TrainingDate = reader.GetDateTime(3),
                     IsAttended = reader.GetBoolean(4),
@@ -115,7 +115,7 @@ namespace sport_club.Services
                     TotalTrainings = reader.GetInt32(3),
                     AttendedTrainings = reader.GetInt32(4),
                     SkippedTrainings = reader.GetInt32(5),
-                    AttendancePercentage = reader.GetDouble(6)
+                    AttendancePercentage = reader.IsDBNull(6) ? null  : reader.GetDouble(6),
                 }
             );
         }
@@ -133,7 +133,7 @@ namespace sport_club.Services
                     TotalTrainings = reader.GetInt32(4),
                     AttendedCount = reader.GetInt32(5),
                     SkippedCount = reader.GetInt32(6),
-                    AttendancePercentage = reader.GetDouble(7)
+                    AttendancePercentage = reader.IsDBNull(7) ? null : reader.GetDouble(7),
                 }
             );
         }

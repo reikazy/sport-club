@@ -13,5 +13,9 @@ namespace sport_club.Models
         public string FullName { get; set; }
         public DateTime? Birthday { get; set; }
         public string ParentPhone { get; set; }
+        public override string ToString()
+        {
+            return $"{FullName}";
+        }
     }
 }
