@@ -76,7 +76,59 @@ namespace sport_club
             List<Attendances>? attendances = dataGridView6.DataSource as List<Attendances>;
             attendances.Add(((AddAttendances)sender).attendances);
             dataGridView6.DataSource = null;
-            dataGridView6.DataSource = attendances;
+            dataGridView6.DataSource = SportClubDatabase.GetAttendances();
+
+        }
+        private void mainView_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Delete:
+                    RowDelete(sender as DataGridView);
+                    GetData();
+                    break;
+            }
+        }
+        private void RowDelete(DataGridView dataGrid)
+        {
+            int Rowindex = dataGrid.SelectedCells[0].RowIndex;
+            var Row = dataGrid.Rows[Rowindex];
+            var data = Row.DataBoundItem;
+
+            if (data is Attendances attendances)
+            {
+                DeleteDataInBase.RemoveAttendance(attendances.Id);
+                dataGrid.DataSource = SportClubDatabase.GetAttendances();
+            }
+            else if (data is Coaches coaches)
+            {
+                DeleteDataInBase.RemoveCoache(coaches.Id);
+                dataGrid.DataSource = SportClubDatabase.GetCoaches();
+            }
+            else if (data is Sportsmen sportsmen)
+            {
+                DeleteDataInBase.RemoveSportsmen(sportsmen.Id);
+                dataGrid.DataSource = SportClubDatabase.GetSportsmens();
+            }
+
+
+        }
+        private void CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            var dataGrid = (DataGridView)sender;
+            int Rowindex = dataGrid.SelectedCells[0].RowIndex;
+            var row = ((DataGridView)sender).Rows[Rowindex];
+            var data = row.DataBoundItem;
+
+            if (data is Coaches coaches)
+            {
+                UpdateDataInBase.Update(coaches);
+            }
+            else if (data is Sportsmen sportsmen)
+            {
+                UpdateDataInBase.Update(sportsmen);
+            }
+            
 
         }
     }

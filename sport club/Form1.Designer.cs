@@ -301,6 +301,8 @@
             dataGridView4.Name = "dataGridView4";
             dataGridView4.Size = new Size(864, 565);
             dataGridView4.TabIndex = 0;
+            dataGridView4.CellValueChanged += CellValueChanged;
+            dataGridView4.KeyDown += mainView_KeyDown;
             // 
             // panel3
             // 
@@ -355,6 +357,8 @@
             dataGridView5.Name = "dataGridView5";
             dataGridView5.Size = new Size(864, 565);
             dataGridView5.TabIndex = 0;
+            dataGridView5.CellValueChanged += CellValueChanged;
+            dataGridView5.KeyDown += mainView_KeyDown;
             // 
             // panel4
             // 
@@ -409,6 +413,8 @@
             dataGridView6.Name = "dataGridView6";
             dataGridView6.Size = new Size(864, 565);
             dataGridView6.TabIndex = 0;
+            dataGridView6.CellValueChanged += CellValueChanged;
+            dataGridView6.KeyDown += mainView_KeyDown;
             // 
             // panel5
             // 

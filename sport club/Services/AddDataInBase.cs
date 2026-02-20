@@ -47,8 +47,8 @@ namespace sport_club.Services
             conn.Open();
 
             using var cmd = new SqliteCommand("INSERT INTO Attendances (SportsmanId, CoachId, TrainingDate, Attended) VALUES (@spId, @coachId, @trdata, @isattend)", conn);
-            cmd.Parameters.AddWithValue("@spId", order.SportsmenId.Id);
-            cmd.Parameters.AddWithValue("@coachId", order.CoachesId.Id);
+            cmd.Parameters.AddWithValue("@spId", order.DisplaySportsmenId);
+            cmd.Parameters.AddWithValue("@coachId", order.DisplayCoachesId);
             cmd.Parameters.AddWithValue("@trdata", order.TrainingDate.ToString("yyyy-MM-dd"));
             cmd.Parameters.AddWithValue("@isattend", order.IsAttended ? 1 : 0);
             cmd.ExecuteNonQuery();

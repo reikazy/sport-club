@@ -16,36 +16,31 @@ namespace sport_club.Forms
             InitializeComponent();
       
             comboBox1.Items.AddRange(SportClubDatabase.GetCoaches().ToArray());
-
-     
-            
             checkedListBox1.Items.AddRange(SportClubDatabase.GetSportsmens().ToArray());
-            
-
             dateTimePicker1.Value = DateTime.Now;
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-
-            
-
-            foreach (Sportsmen sportsman in checkedListBox1.CheckedItems)
+            // Перебираем ВСЕ элементы списка по индексам
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
             {
+                Sportsmen sportsman = (Sportsmen)checkedListBox1.Items[i];
+
+                // Проверяем, отмечен ли элемент
+                bool isAttended = checkedListBox1.GetItemChecked(i);
+
                 attendances = new Attendances
                 {
-                    SportsmenId = Attendances.GetSportsmen(sportsman.Id),        
-                    CoachesId = Attendances.GetCoaches(comboBox1.SelectedIndex),     
+                    CoachesId = (Coaches)comboBox1.SelectedItem,
+                    SportsmenId = sportsman,
+                    
                     TrainingDate = dateTimePicker1.Value.Date,
-                    IsAttended = checkedListBox1.SelectedIndex,
+                    IsAttended = isAttended,  // true = присутствовал, false = прогулял
                 };
 
-                
                 AddDataInBase.AddAttendances(attendances);
-
             }
-            
-
 
             this.Close();
         }
