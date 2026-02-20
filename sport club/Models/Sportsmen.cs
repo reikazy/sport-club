@@ -13,6 +13,7 @@ namespace sport_club.Models
         public int Id { get; set; }
 
         public string FullName { get; set; }
+        [DisplayName("День рождения")]
         public DateTime? Birthday { get; set; }
         public string ParentPhone { get; set; }
         public override string ToString()

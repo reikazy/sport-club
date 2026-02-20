@@ -17,8 +17,12 @@ namespace sport_club.Models
         public Sportsmen SportsmenId { get; set; }
         [Browsable(false)]
         public Coaches CoachesId { get; set; }
+        [Browsable(false)]
         public int DisplaySportsmenId => SportsmenId.Id;
+        [Browsable(false)]
         public int DisplayCoachesId => CoachesId.Id;
+        public string DisplayCoachesName => CoachesId.FullName;
+        public string DisplaySportsmenName => SportsmenId.FullName;
         public DateTime TrainingDate { get; set; }
         public bool IsAttended { get; set; }
 

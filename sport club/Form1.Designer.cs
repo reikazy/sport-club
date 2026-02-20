@@ -154,7 +154,7 @@
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 4;
-            button1.Text = "button1";
+            button1.Text = "Поиск";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -319,7 +319,7 @@
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 0;
-            button3.Text = "button3";
+            button3.Text = "Добавить";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
@@ -375,7 +375,7 @@
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 0;
-            button4.Text = "button4";
+            button4.Text = "Добавить";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
@@ -431,7 +431,7 @@
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
             button5.TabIndex = 0;
-            button5.Text = "button5";
+            button5.Text = "Добавить";
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
             // 
