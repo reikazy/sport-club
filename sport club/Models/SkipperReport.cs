@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace sport_club.Models
 {
     public class SkipperReport
     {
+        [Browsable(false)]
         public int SportsmanId { get; set; }
         public string SportsmanName { get; set; } 
         public DateTime? Birthday { get; set; }

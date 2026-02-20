@@ -123,12 +123,19 @@ namespace sport_club
             if (data is Coaches coaches)
             {
                 UpdateDataInBase.Update(coaches);
+                GetData();
             }
             else if (data is Sportsmen sportsmen)
             {
                 UpdateDataInBase.Update(sportsmen);
+                GetData();
             }
-            
+            else if (data is Attendances attendances)
+            {
+                UpdateDataInBase.Update(attendances);
+                GetData();
+            }
+
 
         }
     }

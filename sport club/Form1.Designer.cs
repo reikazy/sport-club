@@ -198,7 +198,7 @@
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(1123, 577);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "Статистика по тренерам";
+            tabPage2.Text = "Отчёт «Активность ребёнка»";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel2
@@ -241,7 +241,7 @@
             tabPage3.Padding = new Padding(3);
             tabPage3.Size = new Size(1123, 577);
             tabPage3.TabIndex = 2;
-            tabPage3.Text = "Отчёт «Активность ребёнка»";
+            tabPage3.Text = "Статистика по тренерам";
             tabPage3.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel3

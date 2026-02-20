@@ -20,17 +20,32 @@ namespace sport_club.Forms
         {
             InitializeComponent();
         }
+        private bool IsValidPhone(string phone)
+        {
+            if (string.IsNullOrWhiteSpace(phone)) return false;
+
+            var digits = new string(phone.Where(char.IsDigit).ToArray());
+            return digits.Length == 10 || (digits.Length == 11 && (digits.StartsWith("7") || digits.StartsWith("8")));
+        }
         private void Button1_Click(object sender, EventArgs e)
         {
-            sportsmen = new Sportsmen()
+            if (sportsmen != null)
             {
-                FullName = textBox1.Text,
-                Birthday = dateTimePicker1.Value.Date,
-                ParentPhone = maskedTextBox1.Text,
+                if (!IsValidPhone(maskedTextBox1.Text))
+                {
+
+                    sportsmen = new Sportsmen()
+                    {
+                        FullName = textBox1.Text,
+                        Birthday = dateTimePicker1.Value.Date,
+                        ParentPhone = maskedTextBox1.Text,
+
+                    };
+                    AddDataInBase.AddSportsmen(sportsmen);
+                    this.Close();
+                }
+            }
                 
-            };
-            AddDataInBase.AddSportsmen(sportsmen);
-            this.Close();
         }
     }
 }

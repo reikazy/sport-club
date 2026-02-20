@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace sport_club.Models
 {
     public class CoachStatistics
     {
+        [Browsable(false)]
         public int CoachId { get; set; }
         public string CoachName { get; set; } 
         public string SportType { get; set; } 

@@ -10,6 +10,7 @@ namespace sport_club.Services
 {
     public class AddDataInBase
     {
+
         public static Coaches AddCoaches(Coaches client)
         {
             using var conn = new SqliteConnection($"Data Source={SportClubDatabase.ConnectionString}");
